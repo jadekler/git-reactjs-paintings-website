@@ -1,0 +1,5 @@
+---
+applications:
+- name: hannapainting
+  buildpack: https://github.com/cloudfoundry/binary-buildpack.git
+  command: ./website

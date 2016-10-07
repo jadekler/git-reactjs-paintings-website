@@ -7,3 +7,7 @@
 1. `git submodule update --init --recursive`
 1. Install go
 1. Install [node/npm](https://nodejs.org/en/download/)
+
+## Deploying
+
+`scripts/deploy.sh`

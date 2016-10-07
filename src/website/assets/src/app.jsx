@@ -19,11 +19,11 @@ const store = function configureStore(initialState) {
 }()
 
 function mapStateToProps(state) {
-    return []
+    return {}
 }
 
 function mapDispatchToProps(dispatch) {
-    return _ => _
+    return {}
 }
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(Thing)

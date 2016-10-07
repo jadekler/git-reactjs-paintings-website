@@ -22,3 +22,10 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+.idea/
+*.iml
+bin/
+pkg/
+node_modules/
+src/website/dist/

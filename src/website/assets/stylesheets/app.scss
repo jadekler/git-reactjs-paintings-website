@@ -1,13 +1,5 @@
-@import '../node_modules/purecss-sass/vendor/assets/stylesheets/_purecss.scss';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_base';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_buttons';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_forms';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_forms-nr';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_grids';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_grids-responsive';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_menus';
-//@import '../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/_tables';
+@import '../node_modules/material-ui-sass/material-ui.scss';
 
 body {
-  background-color: mintcream;
+  background-color: $red-A200;
 }

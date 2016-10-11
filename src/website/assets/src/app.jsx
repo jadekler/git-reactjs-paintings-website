@@ -1,5 +1,9 @@
 import '../stylesheets/app.scss' // required for wepback to build css
 
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin();
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -11,28 +15,30 @@ import some_reducer from './reducers/some_reducer'
 import Thing from './components/Thing'
 
 const store = function configureStore(initialState) {
-    const createStoreWithMiddleware = applyMiddleware(
-        thunk
-    )(createStore)
+  const createStoreWithMiddleware = applyMiddleware(
+    thunk
+  )(createStore)
 
-    return createStoreWithMiddleware(combineReducers({
-        some_reducer
-    }), initialState)
+  return createStoreWithMiddleware(combineReducers({
+    some_reducer
+  }), initialState)
 }()
 
 function mapStateToProps(state) {
-    return {}
+  return {}
 }
 
 function mapDispatchToProps(dispatch) {
-    return {}
+  return {}
 }
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(Thing)
 
 ReactDOM.render(
-    <Provider store={store}>
-        <ConnectedApp />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <MuiThemeProvider>
+      <ConnectedApp />
+    </MuiThemeProvider>
+  </Provider>,
+  document.getElementById('root')
 )

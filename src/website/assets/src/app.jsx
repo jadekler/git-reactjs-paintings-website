@@ -1,4 +1,4 @@
-var css = require('../stylesheets/app.scss'); // required for wepback to build css
+import '../stylesheets/app.scss' // required for wepback to build css
 
 import React from 'react'
 import ReactDOM from 'react-dom'

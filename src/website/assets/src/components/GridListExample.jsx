@@ -4,19 +4,19 @@ import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 
-import aUrl from "file!./../../images/a.jpg"
-import bUrl from "file!./../../images/b.jpg"
-import cUrl from "file!./../../images/c.jpg"
-import dUrl from "file!./../../images/d.jpg"
-import eUrl from "file!./../../images/e.jpg"
-import fUrl from "file!./../../images/f.jpg"
-import gUrl from "file!./../../images/g.jpg"
-import hUrl from "file!./../../images/h.jpg"
-import iUrl from "file!./../../images/i.jpg"
-import jUrl from "file!./../../images/j.jpg"
-import kUrl from "file!./../../images/k.jpg"
-import lUrl from "file!./../../images/l.jpg"
-import mUrl from "file!./../../images/m.jpg"
+import aUrl from 'file!./../../images/a.jpg'
+import bUrl from 'file!./../../images/b.jpg'
+import cUrl from 'file!./../../images/c.jpg'
+import dUrl from 'file!./../../images/d.jpg'
+import eUrl from 'file!./../../images/e.jpg'
+import fUrl from 'file!./../../images/f.jpg'
+import gUrl from 'file!./../../images/g.jpg'
+import hUrl from 'file!./../../images/h.jpg'
+import iUrl from 'file!./../../images/i.jpg'
+import jUrl from 'file!./../../images/j.jpg'
+import kUrl from 'file!./../../images/k.jpg'
+import lUrl from 'file!./../../images/l.jpg'
+import mUrl from 'file!./../../images/m.jpg'
 
 const styles = {
   root: {
@@ -59,7 +59,7 @@ const GridListExampleSimple = () => (
           key={i}
           title={tile.title}
           subtitle={<span>by <b>{tile.author}</b></span>}
-          actionIcon={<IconButton><StarBorder color="white"/></IconButton>}
+          actionIcon={<IconButton><StarBorder color='white'/></IconButton>}
         >
           <img src={tile.img}/>
         </GridTile>

@@ -12,7 +12,8 @@ import {combineReducers, applyMiddleware, createStore} from 'redux'
 import thunk from 'redux-thunk'
 
 import some_reducer from './reducers/some_reducer'
-import Thing from './components/Thing'
+import ReactThing from './components/ReactThing'
+import GridListExample from './components/GridListExample'
 import Navbar from './components/Navbar'
 
 const store = function configureStore(initialState) {
@@ -33,7 +34,7 @@ function mapDispatchToProps(dispatch) {
   return {}
 }
 
-const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(Thing)
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(ReactThing)
 
 ReactDOM.render(
   <Provider store={store}>

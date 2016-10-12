@@ -1,5 +1,17 @@
 @import '../node_modules/material-ui-sass/material-ui.scss';
+@import './home/home';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+}
 
 body {
   background-color: $grey-50;
+  //noinspection CssUnknownTarget
+
+  background: url("/images/paintbrush-canvas.jpg") no-repeat center top fixed;
+  background-size: cover;
 }
+

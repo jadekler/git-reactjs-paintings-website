@@ -1,8 +1,8 @@
 import '../stylesheets/app.scss' // required for wepback to build css
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin();
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -13,6 +13,7 @@ import thunk from 'redux-thunk'
 
 import some_reducer from './reducers/some_reducer'
 import Thing from './components/Thing'
+import Navbar from './components/Navbar'
 
 const store = function configureStore(initialState) {
   const createStoreWithMiddleware = applyMiddleware(
@@ -41,4 +42,10 @@ ReactDOM.render(
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('root')
+)
+
+ReactDOM.render(
+  <MuiThemeProvider>
+    <Navbar/>
+  </MuiThemeProvider>, document.getElementById('navbar')
 )

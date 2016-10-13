@@ -9,8 +9,11 @@ type ContactHandler struct{}
 
 func (h *ContactHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
     p := page{
-        title: "not needed",
+        PageClass: "contact",
     }
     templates := template.Must(template.ParseFiles("templates/layout.html", "templates/contact.html"))
-    templates.ExecuteTemplate(resp, "base", p)
+    err := templates.ExecuteTemplate(resp, "base", p)
+    if err != nil {
+        panic(err)
+    }
 }

@@ -6,7 +6,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <Toolbar style={{opacity: .7}}>
-        <ToolbarTitle text="Hanna Schulz Painting"/>
+        <ToolbarTitle text="Hanna Schulz Painting" className="toolbar-title" onClick={_ => {window.location = '/'}}/>
         <ToolbarGroup>
           <FlatButton label="Paintings" primary={this.currentPage() == 'paintings'} onClick={_ => {window.location = '/paintings'}}/>
           <FlatButton label="Cards" primary={this.currentPage() == 'cards'} onClick={_ => {window.location = '/cards'}}/>

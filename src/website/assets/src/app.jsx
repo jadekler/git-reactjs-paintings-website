@@ -45,8 +45,16 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-ReactDOM.render(
-  <MuiThemeProvider>
-    <Navbar/>
-  </MuiThemeProvider>, document.getElementById('navbar')
-)
+if (document.getElementById('paintings-root')) {
+  ReactDOM.render(
+    <MuiThemeProvider>
+      <GridListExample/>
+    </MuiThemeProvider>, document.getElementById('paintings-root'))
+}
+
+if (document.getElementById('navbar')) {
+  ReactDOM.render(
+    <MuiThemeProvider>
+      <Navbar/>
+    </MuiThemeProvider>, document.getElementById('navbar'))
+}

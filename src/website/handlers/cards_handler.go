@@ -9,8 +9,11 @@ type CardsHandler struct{}
 
 func (h *CardsHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
     p := page{
-        title: "not needed",
+        PageClass: "cards",
     }
     templates := template.Must(template.ParseFiles("templates/layout.html", "templates/cards.html"))
-    templates.ExecuteTemplate(resp, "base", p)
+    err := templates.ExecuteTemplate(resp, "base", p)
+    if err != nil {
+        panic(err)
+    }
 }

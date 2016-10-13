@@ -7,13 +7,14 @@
     <title>Hanna Schulz Photography</title>
 </head>
 <body>
-<div id="navbar"></div>
-<div class="body">
-    <div id="root"></div>
+<div class="page {{.PageClass}}">
+    <div id="navbar"></div>
+    <div class="body">
+        <div id="root"></div>
 
-    {{template "body" .}}
+        {{template "body" .}}
+    </div>
 </div>
-
 <script src="/dist/bundle.js"></script>
 </body>
 </html>

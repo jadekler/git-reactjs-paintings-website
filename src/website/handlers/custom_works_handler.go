@@ -9,8 +9,11 @@ type CustomWorksHandler struct{}
 
 func (h *CustomWorksHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
     p := page{
-        title: "not needed",
+        PageClass: "custom-works",
     }
     templates := template.Must(template.ParseFiles("templates/layout.html", "templates/custom_works.html"))
-    templates.ExecuteTemplate(resp, "base", p)
+    err := templates.ExecuteTemplate(resp, "base", p)
+    if err != nil {
+        panic(err)
+    }
 }

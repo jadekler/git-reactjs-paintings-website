@@ -1,5 +1,6 @@
 @import '../node_modules/material-ui-sass/material-ui.scss';
 @import './home/home';
+@import './navbar/navbar';
 
 html, body {
   height: 100%;
@@ -7,11 +8,32 @@ html, body {
   font-family: Roboto, sans-serif;
 }
 
-body {
-  background-color: $grey-50;
-  //noinspection CssUnknownTarget
+.page {
+  height: 100%;
+  width: 100%;
 
-  background: url("/images/paintbrush-canvas.jpg") no-repeat center top fixed;
-  background-size: cover;
+  &.home {
+    background-color: $grey-500;
+
+    //noinspection CssUnknownTarget
+    background: url("/images/paintbrush-canvas.jpg") no-repeat center top fixed;
+    background-size: cover;
+  }
+
+  &.paintings {
+    background-color: $green-500;
+  }
+
+  &.cards {
+    background-color: $red-500;
+  }
+
+  &.custom-works {
+    background-color: $blue-500;
+  }
+
+  &.contact {
+    background-color: $purple-500;
+  }
 }
 

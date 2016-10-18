@@ -1,8 +1,7 @@
 import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import Subheader from 'material-ui/Subheader';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import FlatButton from 'material-ui/FlatButton';
+import ActionAddShoppingCart from 'material-ui/svg-icons/action/add-shopping-cart';
 
 import aUrl from 'file!./../../images/a.jpg'
 import bUrl from 'file!./../../images/b.jpg'
@@ -25,41 +24,51 @@ const styles = {
     justifyContent: 'space-around',
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: '100%',
+    height: "calc(100% - 56px)",
     overflowY: 'auto',
+    paddingTop: '10px',
   },
 };
 
 const tilesData = [
-  {img: `./dist/${aUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${bUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${cUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${dUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${eUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${fUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${gUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${hUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${iUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${jUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${kUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${lUrl}`, title: 'Foo', author: 'Hanna Schulz'},
-  {img: `./dist/${mUrl}`, title: 'Foo', author: 'Hanna Schulz'},
+  {img: `./dist/${aUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${bUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${cUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${dUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${eUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${fUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${gUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${hUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${iUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${jUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${kUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${lUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${mUrl}`, title: 'Title Goes Here', price: 3.51},
 ];
 
 const GridListExampleSimple = () => (
   <div style={styles.root}>
     <GridList
-      cellHeight={180}
+      cellHeight={300}
       style={styles.gridList}
+      cols={3}
+      padding={10}
     >
-      <Subheader>December</Subheader>
       {tilesData.map((tile, i) => (
         <GridTile
           key={i}
           title={tile.title}
-          subtitle={<span>by <b>{tile.author}</b></span>}
-          actionIcon={<IconButton><StarBorder color='white'/></IconButton>}
+          subtitle={<span>$<b>{tile.price}</b></span>}
+          actionIcon={
+            <FlatButton
+              label="Purchase"
+              labelPosition="before"
+              primary={true}
+              style={{paddingRight: "5px"}}
+              icon={<ActionAddShoppingCart />}
+            />
+          }
         >
           <img src={tile.img}/>
         </GridTile>

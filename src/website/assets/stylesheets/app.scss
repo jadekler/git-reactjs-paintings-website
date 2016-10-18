@@ -21,7 +21,11 @@ html, body {
   }
 
   &.paintings {
-    background-color: $green-500;
+    background-color: $grey-500;
+
+    //noinspection CssUnknownTarget
+    background: url("/images/cross-stitch.jpg") no-repeat center top fixed;
+    background-size: cover;
   }
 
   &.cards {

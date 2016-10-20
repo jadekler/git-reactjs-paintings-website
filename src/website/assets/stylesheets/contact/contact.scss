@@ -1,0 +1,22 @@
+.contact-page {
+  display: flex;
+  padding: 20px;
+
+  .left {
+    flex: 2;
+    padding-right: 10px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    > div {
+      padding: 20px 0;
+    }
+  }
+
+  .right {
+    flex: 1;
+    padding-left: 10px;
+  }
+}

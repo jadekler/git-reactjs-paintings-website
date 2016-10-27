@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eux
+
 pushd src/website/assets;
     npm prune
     npm install

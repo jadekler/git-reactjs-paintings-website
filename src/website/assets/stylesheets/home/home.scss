@@ -1,4 +1,7 @@
 .home-page {
+  text-align: center;
+  padding-top: 5%;
+
   .text {
     font-size: 4em;
   }
@@ -7,10 +10,9 @@
     font-size: 2em;
   }
 
-  .text, .subtext {
-    text-align: center;
-    padding-top: 20px;
-    color: $light-blue-50;
-    text-shadow: 1px 1px 1px $light-blue-900;
+  img {
+    margin-top: 100px;
+    width: 50%;
+    transform: rotate(180deg);
   }
 }

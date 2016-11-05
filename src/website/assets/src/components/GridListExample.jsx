@@ -32,20 +32,22 @@ const styles = {
 };
 
 const tilesData = [
-  {img: `./dist/${aUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${bUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${cUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${dUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${eUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${fUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${gUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${hUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${iUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${jUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${kUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${lUrl}`, title: 'Title Goes Here', price: 3.51},
-  {img: `./dist/${mUrl}`, title: 'Title Goes Here', price: 3.51},
+  {img: `./dist/${aUrl}`, title: 'Heart', price: 200},
+  {img: `./dist/${bUrl}`, title: 'Head', price: null},
+  {img: `./dist/${cUrl}`, title: 'Wing', price: 100},
+  {img: `./dist/${dUrl}`, title: 'Pyramid', price: 75},
+  {img: `./dist/${eUrl}`, title: 'Star', price: 100},
+  {img: `./dist/${fUrl}`, title: 'Octopus', price: 350},
+  {img: `./dist/${gUrl}`, title: 'Hospital', price: 300},
+  {img: `./dist/${hUrl}`, title: 'Moon', price: 400},
+  {img: `./dist/${iUrl}`, title: 'Rust', price: 350},
+  {img: `./dist/${jUrl}`, title: 'Mountain', price: null},
+  {img: `./dist/${kUrl}`, title: 'Rock', price: 300},
+  {img: `./dist/${lUrl}`, title: 'Ocean', price: 100},
+  {img: `./dist/${mUrl}`, title: 'Gene', price: 450},
 ];
+
+const price = (numPrice) => numPrice ? `$${numPrice}` : 'Not available for sale'
 
 const GridListExampleSimple = () => (
   <div style={styles.root}>
@@ -59,7 +61,7 @@ const GridListExampleSimple = () => (
         <GridTile
           key={i}
           title={tile.title}
-          subtitle={<span>$<b>{tile.price}</b></span>}
+          subtitle={<span>{price(tile.price)}</span>}
           actionIcon={
             <FlatButton
               label="Purchase"
@@ -75,6 +77,6 @@ const GridListExampleSimple = () => (
       ))}
     </GridList>
   </div>
-);
+)
 
 export default GridListExampleSimple;

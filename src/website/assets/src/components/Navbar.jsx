@@ -18,7 +18,7 @@ export default class Navbar extends React.Component {
           <FlatButton hoverColor={blue100} backgroundColor={blue50} label="Contact" primary={this.currentPage() == 'contact'} onClick={_ => {window.location = '/contact'}}/>
         </ToolbarGroup>
       </Toolbar>
-    );
+    )
   }
 
   currentPage() {

@@ -1,7 +1,7 @@
-import React from 'react';
-import {GridList, GridTile} from 'material-ui/GridList';
-import FlatButton from 'material-ui/FlatButton';
-import ActionAddShoppingCart from 'material-ui/svg-icons/action/add-shopping-cart';
+import React from 'react'
+import {GridList, GridTile} from 'material-ui/GridList'
+import FlatButton from 'material-ui/FlatButton'
+import ActionAddShoppingCart from 'material-ui/svg-icons/action/add-shopping-cart'
 
 import aUrl from 'file!./../../images/a.jpg'
 import bUrl from 'file!./../../images/b.jpg'
@@ -29,7 +29,7 @@ const styles = {
     overflowY: 'auto',
     paddingTop: '10px',
   },
-};
+}
 
 const tilesData = [
   {img: `./dist/${aUrl}`, title: 'Heart', price: 200},
@@ -45,7 +45,7 @@ const tilesData = [
   {img: `./dist/${kUrl}`, title: 'Rock', price: 300},
   {img: `./dist/${lUrl}`, title: 'Ocean', price: 100},
   {img: `./dist/${mUrl}`, title: 'Gene', price: 450},
-];
+]
 
 const price = (numPrice) => numPrice ? `$${numPrice}` : 'Not available for sale'
 

@@ -49,7 +49,7 @@ const tilesData = [
 
 const price = (numPrice) => numPrice ? `$${numPrice}` : 'Not available for sale'
 
-const GridListExampleSimple = () => (
+const PhotosGridList = () => (
   <div style={styles.root}>
     <GridList
       cellHeight={300}
@@ -79,4 +79,4 @@ const GridListExampleSimple = () => (
   </div>
 )
 
-export default GridListExampleSimple;
+export default PhotosGridList

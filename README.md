@@ -8,6 +8,15 @@
 1. Install go
 1. Install [node/npm](https://nodejs.org/en/download/)
 
+## Running
+
+1. `scripts/run.sh`
+
+## Developing
+
+1. `scripts/run_go.sh`
+1. `scripts/watch_webpack.sh`
+
 ## Deploying
 
-`scripts/deploy.sh`
+`scripts/deploy-to-cf.sh`

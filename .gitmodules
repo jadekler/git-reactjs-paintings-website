@@ -1,3 +1,6 @@
 [submodule "src/github.com/gorilla/mux"]
 	path = src/github.com/gorilla/mux
 	url = https://github.com/gorilla/mux.git
+[submodule "src/github.com/nfnt/resize"]
+	path = src/github.com/nfnt/resize
+	url = https://github.com/nfnt/resize.git
